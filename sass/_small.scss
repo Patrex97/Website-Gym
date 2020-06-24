@@ -1,135 +1,190 @@
 // Sidebar and Header section
+@media(max-width: 576px){
 
-@mixin line {
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff;
-    position: absolute;
-    left: 0;
-}
 
-@mixin nav-items {
-    width: 100vw;
-    display: block;
-    padding: 10px 0;
-    font-size: 30px;
-}
+    @mixin line {
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        position: absolute;
+        left: 0;
+    }
 
-#website-header {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(146, 141, 141);
-    padding: 5px;
+    @mixin nav-items {
+        width: 100vw;
+        display: block;
+        padding: 10px 0;
+        font-size: 30px;
+    }
 
-    .hamburger {
-        padding: 10px;
-        display: inline-block;
-        background-color: transparent;
-        border: 0px;
-        height: 40px;
-        z-index: 2;
+    #website-header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(146, 141, 141);
+        padding: 5px;
 
-        &:focus {
-            border: none;
-
-        }
-
-        .hamburger_box {
-            width: 60px;
-            height: 40px;
+        .hamburger {
+            padding: 10px;
             display: inline-block;
-            position: relative;
+            background-color: transparent;
+            border: 0px;
+            height: 40px;
+            z-index: 2;
 
+            &:focus {
+                border: none;
+
+            }
+
+            .hamburger_box {
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                position: relative;
+
+            }
         }
-    }
 
-    .hamburger_inner {
-        @include line();
-
-        top: 50%;
-        transform: translateY(-50%);
-        transition: background-color .1s .2s ease-out;
-
-        &::before {
+        .hamburger_inner {
             @include line();
 
-            content: '';
-            top: -10px;
-            transition: transform .4s ease-in-out;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color .1s .2s ease-out;
+
+            &::before {
+                @include line();
+
+                content: '';
+                top: -10px;
+                transition: transform .4s ease-in-out;
+            }
+
+            &::after {
+                @include line();
+
+                content: '';
+                top: 10px;
+                transition: transform .4s ease-in-out;
+            }
         }
 
-        &::after {
-            @include line();
+        .hamburger--active .hamburger_inner {
+            background-color: transparent;
+        }
 
-            content: '';
-            top: 10px;
-            transition: transform .4s ease-in-out;
+        .hamburger--active .hamburger_inner::before {
+            transform: translateY(10px) rotate(45deg);
+        }
+
+        .hamburger--active .hamburger_inner::after {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+
+        .logo {  
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+    }
+
+    .navigation {
+        height: 100vh;
+        width: 100vw;
+        background-color: #464343;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100vw);
+        transition: transform .4s ease-in;
+        z-index: 1;
+        padding-top: 80px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        li {
+            @include nav-items();
+
+            border-bottom: 1px solid white;
+
+            &:first-of-type {
+                border-top: 1px solid white;
+            }
+        }
+
+        .nav-logo img {
+            @include nav-items();
+
+            width: 150px;
+            height: 150px;
         }
     }
 
-    .hamburger--active .hamburger_inner {
-        background-color: transparent;
+    .navigation--active {
+        transform: translateX(0px);
     }
 
-    .hamburger--active .hamburger_inner::before {
-        transform: translateY(10px) rotate(45deg);
+    .name{
+        .part1,.part2{
+            display:block;
+            color:white;
+            font-weight:bold;
+            font-size:20px;
+        }
+        margin:0;
     }
 
-    .hamburger--active .hamburger_inner::after {
-        transform: translateY(-10px) rotate(-45deg);
-    }
+    // Main-page
 
-    .logo img {
-        width: 60px;
-        height: 60px;
-    }
-
-}
-
-.navigation {
-    height: 100vh;
-    width: 100vw;
-    background-color: #464343;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-100vw);
-    transition: transform .4s ease-in;
-    z-index: 1;
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    li {
-        @include nav-items();
-
-        border-bottom: 1px solid white;
-
-        &:first-of-type {
-            border-top: 1px solid white;
+    #main-page {
+        height: 300px;
+        background-image: url("../images/slider/zdj3.jpg");
+        background-size: cover;
+        color: white;
+        padding:30px 0;
+        .motto{
+            font-size:20px;
+            margin-top:50px;
+            width:100%;
+            padding:0 8px;
+            background-color:rgba($color: #000000, $alpha: 0.35);
         }
     }
 
-    .nav-logo img {
-        @include nav-items();
+    #about-us{
+        background-color:white;
+        padding:10px;
 
-        width: 200px;
-        height: 200px;
+        .header{
+            display:inline-block;
+            border-bottom:3px double yellow;
+        }
     }
-}
 
-.navigation--active {
-    transform: translateX(0px);
-}
+    #gallery{
+        position:relative;
+        .previous, .next{
+            position: absolute;
+            background-color: rgba($color: silver, $alpha: 0.30);
+            top:50%;
+            transform:translateY(-50%);
+            height:35px;
+            width:35px;
+            font-weight: bold;
+        }
 
-// Main-page
+        .previous{    
+            left:2%;
+        }
 
-#main-page {
-    height: 300px;
-    background-image: linear-gradient(0deg, rgba(25, 0, 150, 0.267), rgba(76, 0, 255, 0.055)), url("../images/zdj4.jpg");
-    background-size: cover;
-    color: white;
+        .next{
+            right:2%;
+        }
+    }
+
 }

@@ -3,156 +3,185 @@ body {
   background-color: #aca5a5;
 }
 
-#website-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: #928d8d;
-  padding: 5px;
-}
-
-#website-header .hamburger {
-  padding: 10px;
-  display: inline-block;
-  background-color: transparent;
-  border: 0px;
-  height: 40px;
-  z-index: 2;
-}
-
-#website-header .hamburger:focus {
-  border: none;
-}
-
-#website-header .hamburger .hamburger_box {
-  width: 60px;
-  height: 40px;
-  display: inline-block;
-  position: relative;
-}
-
-#website-header .hamburger_inner {
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: background-color .1s .2s ease-out;
-  transition: background-color .1s .2s ease-out;
-}
-
-#website-header .hamburger_inner::before {
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-  position: absolute;
-  left: 0;
-  content: '';
-  top: -10px;
-  -webkit-transition: -webkit-transform .4s ease-in-out;
-  transition: -webkit-transform .4s ease-in-out;
-  transition: transform .4s ease-in-out;
-  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
-}
-
-#website-header .hamburger_inner::after {
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-  position: absolute;
-  left: 0;
-  content: '';
-  top: 10px;
-  -webkit-transition: -webkit-transform .4s ease-in-out;
-  transition: -webkit-transform .4s ease-in-out;
-  transition: transform .4s ease-in-out;
-  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
-}
-
-#website-header .hamburger--active .hamburger_inner {
-  background-color: transparent;
-}
-
-#website-header .hamburger--active .hamburger_inner::before {
-  -webkit-transform: translateY(10px) rotate(45deg);
-          transform: translateY(10px) rotate(45deg);
-}
-
-#website-header .hamburger--active .hamburger_inner::after {
-  -webkit-transform: translateY(-10px) rotate(-45deg);
-          transform: translateY(-10px) rotate(-45deg);
-}
-
-#website-header .logo img {
-  width: 60px;
-  height: 60px;
-}
-
-.navigation {
-  height: 100vh;
-  width: 100vw;
-  background-color: #464343;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translateX(-100vw);
-          transform: translateX(-100vw);
-  -webkit-transition: -webkit-transform .4s ease-in;
-  transition: -webkit-transform .4s ease-in;
-  transition: transform .4s ease-in;
-  transition: transform .4s ease-in, -webkit-transform .4s ease-in;
-  z-index: 1;
-  padding-top: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.navigation li {
-  width: 100vw;
-  display: block;
-  padding: 10px 0;
-  font-size: 30px;
-  border-bottom: 1px solid white;
-}
-
-.navigation li:first-of-type {
-  border-top: 1px solid white;
-}
-
-.navigation .nav-logo img {
-  width: 100vw;
-  display: block;
-  padding: 10px 0;
-  font-size: 30px;
-  width: 200px;
-  height: 200px;
-}
-
-.navigation--active {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-#main-page {
-  height: 300px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(25, 0, 150, 0.267)), to(rgba(76, 0, 255, 0.055))), url("../images/zdj4.jpg");
-  background-image: linear-gradient(0deg, rgba(25, 0, 150, 0.267), rgba(76, 0, 255, 0.055)), url("../images/zdj4.jpg");
-  background-size: cover;
-  color: white;
+@media (max-width: 576px) {
+  #website-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #928d8d;
+    padding: 5px;
+  }
+  #website-header .hamburger {
+    padding: 10px;
+    display: inline-block;
+    background-color: transparent;
+    border: 0px;
+    height: 40px;
+    z-index: 2;
+  }
+  #website-header .hamburger:focus {
+    border: none;
+  }
+  #website-header .hamburger .hamburger_box {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+  }
+  #website-header .hamburger_inner {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: background-color .1s .2s ease-out;
+    transition: background-color .1s .2s ease-out;
+  }
+  #website-header .hamburger_inner::before {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    content: '';
+    top: -10px;
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    transition: -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+  }
+  #website-header .hamburger_inner::after {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    content: '';
+    top: 10px;
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    transition: -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+  }
+  #website-header .hamburger--active .hamburger_inner {
+    background-color: transparent;
+  }
+  #website-header .hamburger--active .hamburger_inner::before {
+    -webkit-transform: translateY(10px) rotate(45deg);
+            transform: translateY(10px) rotate(45deg);
+  }
+  #website-header .hamburger--active .hamburger_inner::after {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+            transform: translateY(-10px) rotate(-45deg);
+  }
+  #website-header .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  .navigation {
+    height: 100vh;
+    width: 100vw;
+    background-color: #464343;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+    -webkit-transition: -webkit-transform .4s ease-in;
+    transition: -webkit-transform .4s ease-in;
+    transition: transform .4s ease-in;
+    transition: transform .4s ease-in, -webkit-transform .4s ease-in;
+    z-index: 1;
+    padding-top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .navigation li {
+    width: 100vw;
+    display: block;
+    padding: 10px 0;
+    font-size: 30px;
+    border-bottom: 1px solid white;
+  }
+  .navigation li:first-of-type {
+    border-top: 1px solid white;
+  }
+  .navigation .nav-logo img {
+    width: 100vw;
+    display: block;
+    padding: 10px 0;
+    font-size: 30px;
+    width: 150px;
+    height: 150px;
+  }
+  .navigation--active {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .name {
+    margin: 0;
+  }
+  .name .part1, .name .part2 {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  #main-page {
+    height: 300px;
+    background-image: url("../images/slider/zdj3.jpg");
+    background-size: cover;
+    color: white;
+    padding: 30px 0;
+  }
+  #main-page .motto {
+    font-size: 20px;
+    margin-top: 50px;
+    width: 100%;
+    padding: 0 8px;
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+  #about-us {
+    background-color: white;
+    padding: 10px;
+  }
+  #about-us .header {
+    display: inline-block;
+    border-bottom: 3px double yellow;
+  }
+  #gallery {
+    position: relative;
+  }
+  #gallery .previous, #gallery .next {
+    position: absolute;
+    background-color: rgba(192, 192, 192, 0.3);
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 35px;
+    width: 35px;
+    font-weight: bold;
+  }
+  #gallery .previous {
+    left: 2%;
+  }
+  #gallery .next {
+    right: 2%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
