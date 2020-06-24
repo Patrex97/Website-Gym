@@ -14,7 +14,7 @@ const previousBtn = document.querySelector('.previous');
 const nextBtn = document.querySelector('.next');
 const photosCounter = 8; // How many photos are in directory "./images/slider"
 let slideCounter = 1;
-const path = '/images/slider/zdj';
+const path = 'images/slider/zdj';
 
 previousBtn.addEventListener('click', () =>{
     if(slideCounter - 1 == 0 ){
