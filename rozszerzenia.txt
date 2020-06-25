@@ -1,0 +1,4 @@
+Beautify
+HTML, CSS Support
+HTML snippets
+Javascript (ES6)

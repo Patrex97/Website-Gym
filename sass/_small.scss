@@ -1,5 +1,5 @@
 // Sidebar and Header section
-@media(max-width: 576px){
+@media(max-width: 576px) {
 
 
     @mixin line {
@@ -24,6 +24,7 @@
         justify-content: space-between;
         background-color: rgb(146, 141, 141);
         padding: 5px;
+        z-index: 2;
 
         .hamburger {
             padding: 10px;
@@ -31,7 +32,7 @@
             background-color: transparent;
             border: 0px;
             height: 40px;
-            z-index: 2;
+            z-index: 3;
 
             &:focus {
                 border: none;
@@ -59,7 +60,7 @@
 
                 content: '';
                 top: -10px;
-                transition: transform .4s ease-in-out;
+                transition: transform .2s ease-in-out;
             }
 
             &::after {
@@ -67,7 +68,7 @@
 
                 content: '';
                 top: 10px;
-                transition: transform .4s ease-in-out;
+                transition: transform .2s ease-in-out;
             }
         }
 
@@ -83,7 +84,7 @@
             transform: translateY(-10px) rotate(-45deg);
         }
 
-        .logo {  
+        .logo {
             img {
                 width: 60px;
                 height: 60px;
@@ -100,8 +101,8 @@
         top: 0;
         left: 0;
         transform: translateX(-100vw);
-        transition: transform .4s ease-in;
-        z-index: 1;
+        transition: transform .2s ease-in;
+        z-index: 2;
         padding-top: 80px;
         display: flex;
         justify-content: center;
@@ -129,13 +130,16 @@
         transform: translateX(0px);
     }
 
-    .name{
-        .part1,.part2{
-            display:block;
-            color:white;
-            font-weight:bold;
-            font-size:20px;
+    .name {
+
+        .part1,
+        .part2 {
+            display: block;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
         }
+
         margin:0;
     }
 
@@ -146,45 +150,121 @@
         background-image: url("../images/slider/zdj3.jpg");
         background-size: cover;
         color: white;
-        padding:30px 0;
-        .motto{
-            font-size:20px;
-            margin-top:50px;
-            width:100%;
-            padding:0 8px;
-            background-color:rgba($color: #000000, $alpha: 0.35);
+        padding: 30px 0;
+
+        .motto {
+            font-size: 20px;
+            margin-top: 50px;
+            width: 100%;
+            padding: 0 8px;
+            background-color: rgba($color: #000000, $alpha: 0.35);
         }
     }
 
-    #about-us{
-        background-color:white;
-        padding:10px;
+    .about-us {
+        background-color: white;
+        padding: 10px;
 
-        .header{
-            display:inline-block;
-            border-bottom:3px double yellow;
+        .header {
+            display: inline-block;
+            border-bottom: 3px double yellow;
         }
     }
 
-    #gallery{
-        position:relative;
-        .previous, .next{
+    .gallery {
+        position: relative;
+
+
+
+        .previous,
+        .next {
             position: absolute;
             background-color: rgba($color: silver, $alpha: 0.30);
-            top:50%;
-            transform:translateY(-50%);
-            height:35px;
-            width:35px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 35px;
+            width: 35px;
             font-weight: bold;
         }
 
-        .previous{    
-            left:2%;
+        .previous {
+            left: 2%;
         }
 
-        .next{
-            right:2%;
+        .next {
+            right: 2%;
         }
     }
 
+    .offer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 5vw;
+
+        .offer1,
+        .offer2 {
+            position: relative;
+            width: 90vw;
+            height: 200px;
+            background-color: rgb(187, 212, 228);
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 3px dashed white;
+            box-shadow: 3px 3px 5px 3px gold, -3px -3px 5px 3px gold;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                height: 206px;
+                width: calc(100% + 10px);
+                border: 3px groove gold;
+            }
+        }
+
+        .offer2 {
+            box-shadow: 3px 3px 5px 3px silver, -3px -3px 5px 3px silver;
+
+            &::before {
+                border: 3px groove rgb(223, 216, 216);
+            }
+        }
+
+
+        .offer3 {
+            position: relative;
+            width: 90vw;
+            height: 120px;
+            background-color: rgb(187, 212, 228);
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 3px groove silver;
+        }
+
+        .age {
+            font-family: 'Raleway'serif;
+            font-size: 30px;
+            font-weight: bold;
+            display: block;
+            border-bottom: solid 3px silver;
+        }
+
+        .prize {
+            font-family: 'Raleway'serif;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            border-bottom: solid 3px silver;
+        }
+
+        .list-header {
+            font-weight: bold;
+
+        }
+
+    }
 }

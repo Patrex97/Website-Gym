@@ -9,25 +9,25 @@ hamburger.addEventListener('click', () => {
 
 // Gallery Slider
 
-const slider = document.querySelector('.slider');
+const slider = document.querySelector('.slider img');
 const previousBtn = document.querySelector('.previous');
 const nextBtn = document.querySelector('.next');
 const photosCounter = 8; // How many photos are in directory "./images/slider"
 let slideCounter = 1;
 const path = 'images/slider/zdj';
 
-previousBtn.addEventListener('click', () =>{
-    if(slideCounter - 1 == 0 ){
+previousBtn.addEventListener('click', () => {
+    if (slideCounter - 1 == 0) {
         slideCounter = photosCounter;
-    }else slideCounter--;
+    } else slideCounter--;
 
-   slider.setAttribute('src', `${path + slideCounter}.jpg`);
+    slider.setAttribute('src', `${path + slideCounter}.jpg`);
 });
 
-nextBtn.addEventListener('click', () =>{
-    if(slideCounter + 1 > photosCounter ){
+nextBtn.addEventListener('click', () => {
+    if (slideCounter + 1 > photosCounter) {
         slideCounter = 1;
-    }else slideCounter++;
-    
-   slider.setAttribute('src', `${path + slideCounter}.jpg`);
+    } else slideCounter++;
+
+    slider.setAttribute('src', `${path + slideCounter}.jpg`);
 });
