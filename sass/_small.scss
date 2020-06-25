@@ -1,6 +1,7 @@
 // Sidebar and Header section
 @media(max-width: 576px) {
 
+    $bg-color: rgb(149, 148, 156);
 
     @mixin line {
         width: 100%;
@@ -102,7 +103,7 @@
         left: 0;
         transform: translateX(-100vw);
         transition: transform .2s ease-in;
-        z-index: 2;
+        z-index: 1;
         padding-top: 80px;
         display: flex;
         justify-content: center;
@@ -161,25 +162,42 @@
         }
     }
 
+    .info{
+        background-color:white;
+        padding:20px 15vw;
+        display:flex;
+        flex-direction: column;
+
+        th{
+            text-align: left;
+        }
+
+        td{
+            text-align:right;
+        }
+    }
+
     .about-us {
-        background-color: white;
+        background: linear-gradient(#ffffff,$bg-color);
         padding: 10px;
 
-        .header {
-            display: inline-block;
-            border-bottom: 3px double yellow;
+        .description{
+            text-align:justify;
         }
     }
 
     .gallery {
         position: relative;
+        background-color: $bg-color;
 
-
-
+        .slider{
+            position: relative;
+            border:2px groove silver;
+        }
         .previous,
         .next {
             position: absolute;
-            background-color: rgba($color: silver, $alpha: 0.30);
+            background-color: rgba($color: silver, $alpha: 0.6);
             top: 50%;
             transform: translateY(-50%);
             height: 35px;
@@ -201,7 +219,7 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 20px 5vw;
-
+        background-color: rgba($bg-color, $alpha: 1.0);
         .offer1,
         .offer2 {
             position: relative;
@@ -266,5 +284,65 @@
 
         }
 
+    }
+
+    .trainers{
+        background: linear-gradient($bg-color,$bg-color, #ffffff);
+        padding:20px 10px;
+
+        .h2{
+            padding-bottom:10px;
+        }
+
+        .trener{
+            padding:10px 0;
+            margin:20px 0;
+            position:relative;
+            border:3px ridge rgb(248, 230, 124);
+            background: linear-gradient(0.25turn, rgba(219, 207, 135, 0.342), #ebf8e1, rgba(189, 178, 114, 0.322));
+
+            &::before{
+                position:absolute;
+                content:'';
+                top:-2%;
+                left:-2%;
+                border:3px groove rgb(255, 236, 128);
+                width:104%;
+                height:104%;
+            }
+        }
+        .description{
+            padding:5px 15%;
+            display:block;
+            font-size:20px;
+        }
+
+        .contact{
+            display:block;
+            background-color:transparent;
+        }
+
+        .photo{
+            margin:10px auto;
+            width:60vw;
+        }
+
+        .contact-fb{
+            font-size:25px;
+            font-weight:bold;
+        }
+    }
+
+    .contact{
+        background-color:white;
+        padding:20px 0;
+        .text{
+            p{
+                border-bottom: 3px solid red;
+            }
+        }
+    }
+
+    .website-footer{
     }
 }

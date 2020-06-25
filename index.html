@@ -30,8 +30,8 @@
                 <li><a href="#top">Start</a></li>
                 <li><a href="#about-us">O nas</a></li>
                 <li><a href="#gallery">Zdjęcia</a></li>
+                <li><a href="#trainers">Trenerzy Personalni</a></li>
                 <li><a href="#offer">Oferta</a></li>
-                <li><a href="#forms">Formularz</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
             <a href="#top" class="nav-logo"><img src="images/logo.png" /></a>
@@ -41,28 +41,63 @@
     <main class="main-container">
         <section id="main-page">
             <p class="motto">"Najtrudniejsze jest zdecydowanie się na działanie. Reszta to już tylko kwestia
-                wytrwałości." - Amelia<span id="about-us"></span>
-                Earhart</p>
+                wytrwałości." - Amelia Earhart</p>
+        </section>
+        <section class="info">
+            <h2 class="header">Godziny Pracy</h2>
+                <table>
+                    <tr>
+                        <th>Poniedziałek</th>
+                        <td>7:30 - 21:00</td>
+                    </tr>
+                    <tr>
+                        <th>Wtorek</th>
+                        <td>7:30 - 21:00</td>
+                    </tr>
+                    <tr>
+                        <th>Środa</th>
+                        <td>7:30 - 21:00</td>
+                    </tr>
+                    <tr>
+                        <th>Czwartek</th>
+                        <td>7:30 - 21:00</td>
+                    </tr>
+                    <tr>
+                        <th>Piątek</th>
+                        <td>7:30 - 21:00</td>
+                    </tr> <span id="about-us"></span>
+                    <tr>
+                        <th>Sobota</th>
+                        <td>9:00 - 13:00</td>
+                    </tr>
+                    <tr>
+                        <th>Niedziela</th>
+                        <td>9:00 - 12:00</td>
+                    </tr>
+                </table>
         </section>
         <section class="about-us">
             <h2 class="header">O nas</h2>
-            <p>Ośrodek ćwiczeń siłowych '' JACEK '' to siłownia o powierzchni 800 m2, która została stworzona z myślą o
+            <p class="description">Ośrodek ćwiczeń siłowych '' JACEK '' to siłownia o powierzchni 800 m2, która została stworzona z myślą o
                 ludziach dążących na szczyt swoich możliwości. Miejsce to jest wyposażone w dużą ilość sprzętu do
-                treningów. Na tej powierzchni znajduję się ponad 170 maszyn.</p><span id="gallery"></span>
-            <p>Kilka różnych urządzeń na jedną partię mięśniową, dzięki czemu nie musisz czekać, aż ktoś inny skończy
+                treningów. Na tej powierzchni znajduję się ponad 170 maszyn.</p>
+            <p class="description">Kilka różnych urządzeń na jedną partię mięśniową, dzięki czemu nie musisz czekać, aż ktoś inny skończy
                 ćwiczyć. Między innymi: maszyny aerobowe, maszyny do treningu siłowego, ciężary wolne, materace i
                 różnego rodzaju piłki, maty i gumy rozciągliwe</p>
         </section>
-        <section id="offer" class="gallery">
-
+        <span id="gallery"></span>
+        <section class="gallery">     
+            <h2 class="h2" >Galeria</h2> 
             <div class="slider">
                 <img src="images/slider/zdj1.jpg" class="img-fluid" alt="something goes wrong" />
+                <button class="previous">
+                    < </button> <button class="next"> >
+                </button>
             </div>
-            <button class="previous">
-                < </button> <button class="next"> >
-            </button>
+            
         </section>
         <section class="offer">
+            <h2 class="h2" id="offer">Oferta</h2>
             <div class="offer1"><span class="age">Do 19 lat</span><span class="prize">karnet 80zł za miesiąc</span>
                 <span>
                     <span class="list-header">Ten karnet zapewnia:</span>
@@ -97,21 +132,35 @@
             </div>
             <div class="offer3"><span class="age">2 tygodnie</span><span class="prize"> Karnet 90zł </span></div>
             <div class="offer3"><span class="age">Pojedyńcze wejście</span><span class="prize"> 20zł</span></div>
-        </section>
-        <section id="forms">
-            <form method="POST">
-                <input type="text" />
-                <input type="text" />
-                <input type="button" value="Wyślij" />
-            </form>
-        </section>
-        <section id="contact">
-            <p>Adres: Jakiś tam adres</p>
-            <p>Email: Przykład@email.com</p>
-            <p>tel.: 666&nbsp666&nbsp666</p>
+        </section>   
+        <section class="trainers">
+            <h2 class="h2">Trenerzy Personalni</h2>
+            <div class="trener">
+                <h3>Edyta Jabłońska</h3>
+                <div class="photo"><img src="images/trener_edyta.jpg" class="img-fluid" alt="Something goes wrong" /></div>
+                <span class="description"> Trener personalny oraz instruktor fitness siłowego</span>
+                <span class="contact">Numer telefonu: 695 987 320</span>
+                <span class="contact-fb"><a href="https://www.facebook.com/pg/treneredytajablonska/photos/?tab=album&album_id=1544095102303833&ref=page_internal">Facebook</a></span>
+            </div>
+            <div class="trener">
+                <h3>Mateusz Jabłoński</h3>
+                <div class="photo"><img src="images/trener_mateusz.jpg" class="img-fluid" alt="Something goes wrong" /></div>
+                <span class="description"> Trener personalny oraz instruktor fitness siłowego</span>
+                <span class="contact">Numer telefonu: 666 666 666</span>
+                <span class="contact-fb"><a href="https://www.facebook.com/matijablonek/timeline?lst=100003028422748%3A100004038316618%3A1593108582">Facebook</a></span>
+            </div>
+        </section> 
+        <section class="contact">
+            <h2 id="contact"> Kontakt</h2>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2335.105408036644!2d15.581757115420546!3d54.1782090197767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470015dc5008b4ed%3A0xb345410f08ba71c6!2zT8Wbcm9kZWsgxId3aWN6ZcWEIHNpxYJvd3ljaCAiSkFDRUsi!5e0!3m2!1spl!2spl!4v1593111926625!5m2!1spl!2spl" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="text">
+                <p>Adres: Kowalskiego 78</p>
+                <p>Email: Przykład@email.com</p>
+                <p>tel.: 666&nbsp666&nbsp666</p>
+            </div>
         </section>
     </main>
-    <footer id="website-footer">
+    <footer id="website-footer" class="website-footer">
         <!--
                 Section 7
             -->
