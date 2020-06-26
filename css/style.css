@@ -25,6 +25,7 @@ body {
     border: 0px;
     height: 40px;
     z-index: 3;
+    outline: none;
   }
   #website-header .hamburger:focus {
     border: none;
@@ -44,8 +45,8 @@ body {
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    -webkit-transition: background-color .1s .2s ease-out;
-    transition: background-color .1s .2s ease-out;
+    -webkit-transition: background-color .1s ease-out;
+    transition: background-color .1s ease-out;
   }
   #website-header .hamburger_inner::before {
     width: 100%;
@@ -84,7 +85,7 @@ body {
     -webkit-transform: translateY(-10px) rotate(-45deg);
             transform: translateY(-10px) rotate(-45deg);
   }
-  #website-header .logo img {
+  #website-header .logo {
     width: 60px;
     height: 60px;
   }
@@ -106,33 +107,36 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .navigation li {
-    width: 100vw;
+  .navigation .menu-item {
+    width: 70%;
+    float: right;
     display: block;
     padding: 10px 0;
-    font-size: 30px;
+    font-size: 20px;
     border-bottom: 1px solid white;
   }
-  .navigation li:first-of-type {
+  .navigation .menu-item:first-of-type {
     border-top: 1px solid white;
   }
-  .navigation .nav-logo img {
-    width: 100vw;
+  .navigation .nav-logo {
+    width: 70%;
+    float: right;
     display: block;
     padding: 10px 0;
-    font-size: 30px;
+    font-size: 20px;
+    float: right;
     width: 150px;
     height: 150px;
   }
   .navigation--active {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(-30vw);
+            transform: translateX(-30vw);
   }
   .name {
     margin: 0;
@@ -169,10 +173,10 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .info th {
+  .info .left {
     text-align: left;
   }
-  .info td {
+  .info .right {
     text-align: right;
   }
   .about-us {
@@ -264,7 +268,7 @@ body {
   }
   .offer .age {
     font-family: 'Raleway'serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     display: block;
     border-bottom: solid 3px silver;
@@ -275,6 +279,7 @@ body {
     font-weight: bold;
     display: block;
     border-bottom: solid 3px silver;
+    margin-bottom: 10px;
   }
   .offer .list-header {
     font-weight: bold;
@@ -321,12 +326,35 @@ body {
     font-size: 25px;
     font-weight: bold;
   }
+  .trainers .contact-fb a:link,
+  .trainers .contact-fb a:visited {
+    color: blue;
+  }
   .contact {
     background-color: white;
     padding: 20px 0;
   }
-  .contact .text p {
+  .contact .text {
     border-bottom: 3px solid red;
+    font-size: 20px;
+  }
+  .website-footer .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 10px;
+  }
+  .website-footer .links .menu-left {
+    padding: 0 10px;
+  }
+  .website-footer .links .vertical-line {
+    border-left: 1px solid white;
+  }
+  .website-footer .rights {
+    font-size: 17px;
+    color: white;
   }
 }
 /*# sourceMappingURL=style.css.map */

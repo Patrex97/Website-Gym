@@ -12,10 +12,11 @@
     }
 
     @mixin nav-items {
-        width: 100vw;
+        width: 70%;
+        float: right;
         display: block;
         padding: 10px 0;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     #website-header {
@@ -34,6 +35,7 @@
             border: 0px;
             height: 40px;
             z-index: 3;
+            outline: none;
 
             &:focus {
                 border: none;
@@ -54,7 +56,7 @@
 
             top: 50%;
             transform: translateY(-50%);
-            transition: background-color .1s .2s ease-out;
+            transition: background-color .1s ease-out;
 
             &::before {
                 @include line();
@@ -86,10 +88,9 @@
         }
 
         .logo {
-            img {
-                width: 60px;
-                height: 60px;
-            }
+            width: 60px;
+            height: 60px;
+
         }
 
     }
@@ -106,10 +107,10 @@
         z-index: 1;
         padding-top: 80px;
         display: flex;
-        justify-content: center;
+        justify-content: right;
         flex-wrap: wrap;
 
-        li {
+        .menu-item {
             @include nav-items();
 
             border-bottom: 1px solid white;
@@ -119,16 +120,16 @@
             }
         }
 
-        .nav-logo img {
+        .nav-logo {
             @include nav-items();
-
+            float: right;
             width: 150px;
             height: 150px;
         }
     }
 
     .navigation--active {
-        transform: translateX(0px);
+        transform: translateX(-30vw);
     }
 
     .name {
@@ -162,27 +163,27 @@
         }
     }
 
-    .info{
-        background-color:white;
-        padding:20px 15vw;
-        display:flex;
+    .info {
+        background-color: white;
+        padding: 20px 15vw;
+        display: flex;
         flex-direction: column;
 
-        th{
+        .left {
             text-align: left;
         }
 
-        td{
-            text-align:right;
+        .right {
+            text-align: right;
         }
     }
 
     .about-us {
-        background: linear-gradient(#ffffff,$bg-color);
+        background: linear-gradient(#ffffff, $bg-color);
         padding: 10px;
 
-        .description{
-            text-align:justify;
+        .description {
+            text-align: justify;
         }
     }
 
@@ -190,10 +191,11 @@
         position: relative;
         background-color: $bg-color;
 
-        .slider{
+        .slider {
             position: relative;
-            border:2px groove silver;
+            border: 2px groove silver;
         }
+
         .previous,
         .next {
             position: absolute;
@@ -220,6 +222,7 @@
         justify-content: space-between;
         padding: 20px 5vw;
         background-color: rgba($bg-color, $alpha: 1.0);
+
         .offer1,
         .offer2 {
             position: relative;
@@ -265,7 +268,7 @@
 
         .age {
             font-family: 'Raleway'serif;
-            font-size: 30px;
+            font-size: 25px;
             font-weight: bold;
             display: block;
             border-bottom: solid 3px silver;
@@ -277,72 +280,98 @@
             font-weight: bold;
             display: block;
             border-bottom: solid 3px silver;
+            margin-bottom: 10px;
         }
 
         .list-header {
             font-weight: bold;
-
         }
 
     }
 
-    .trainers{
-        background: linear-gradient($bg-color,$bg-color, #ffffff);
-        padding:20px 10px;
+    .trainers {
+        background: linear-gradient($bg-color, $bg-color, #ffffff);
+        padding: 20px 10px;
 
-        .h2{
-            padding-bottom:10px;
+        .h2 {
+            padding-bottom: 10px;
         }
 
-        .trener{
-            padding:10px 0;
-            margin:20px 0;
-            position:relative;
-            border:3px ridge rgb(248, 230, 124);
+        .trener {
+            padding: 10px 0;
+            margin: 20px 0;
+            position: relative;
+            border: 3px ridge rgb(248, 230, 124);
             background: linear-gradient(0.25turn, rgba(219, 207, 135, 0.342), #ebf8e1, rgba(189, 178, 114, 0.322));
 
-            &::before{
-                position:absolute;
-                content:'';
-                top:-2%;
-                left:-2%;
-                border:3px groove rgb(255, 236, 128);
-                width:104%;
-                height:104%;
+            &::before {
+                position: absolute;
+                content: '';
+                top: -2%;
+                left: -2%;
+                border: 3px groove rgb(255, 236, 128);
+                width: 104%;
+                height: 104%;
             }
         }
-        .description{
-            padding:5px 15%;
-            display:block;
-            font-size:20px;
+
+        .description {
+            padding: 5px 15%;
+            display: block;
+            font-size: 20px;
         }
 
-        .contact{
-            display:block;
-            background-color:transparent;
+        .contact {
+            display: block;
+            background-color: transparent;
         }
 
-        .photo{
-            margin:10px auto;
-            width:60vw;
+        .photo {
+            margin: 10px auto;
+            width: 60vw;
         }
 
-        .contact-fb{
-            font-size:25px;
-            font-weight:bold;
-        }
-    }
+        .contact-fb {
+            font-size: 25px;
+            font-weight: bold;
 
-    .contact{
-        background-color:white;
-        padding:20px 0;
-        .text{
-            p{
-                border-bottom: 3px solid red;
+            a:link,
+            a:visited {
+                color: blue;
             }
         }
     }
 
-    .website-footer{
+    .contact {
+        background-color: white;
+        padding: 20px 0;
+
+        .text {
+            border-bottom: 3px solid red;
+            font-size: 20px;
+        }
     }
+
+    .website-footer {
+        .links {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+
+            .menu-left {
+                padding: 0 10px;
+            }
+
+            .vertical-line {
+                border-left: 1px solid white;
+
+            }
+        }
+
+        .rights {
+            font-size: 17px;
+            color: white;
+        }
+    }
+
 }
