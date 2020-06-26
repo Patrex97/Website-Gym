@@ -19,7 +19,7 @@
         font-size: 20px;
     }
 
-    #website-header {
+    .website-header {
         position: sticky;
         top: 0;
         display: flex;
@@ -147,7 +147,7 @@
 
     // Main-page
 
-    #main-page {
+    .main-page {
         height: 300px;
         background-image: url("../images/slider/zdj3.jpg");
         background-size: cover;
@@ -358,18 +358,21 @@
             justify-content: space-around;
             padding: 10px;
 
-            .menu-left {
-                padding: 0 10px;
-            }
-
             .vertical-line {
                 border-left: 1px solid white;
-
             }
+
+            .menu-item {
+                padding: 5px 0;
+            }
+
+            .facebook-icon {
+                width: 150px;
+            }
+
         }
 
         .rights {
-            font-size: 17px;
             color: white;
         }
     }

@@ -1,10 +1,16 @@
 body {
   text-align: center;
   background-color: grey;
+  font-family: 'Raleway'serif;
+}
+
+body a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 @media (max-width: 576px) {
-  #website-header {
+  .website-header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -18,7 +24,7 @@ body {
     padding: 5px;
     z-index: 2;
   }
-  #website-header .hamburger {
+  .website-header .hamburger {
     padding: 10px;
     display: inline-block;
     background-color: transparent;
@@ -27,16 +33,16 @@ body {
     z-index: 3;
     outline: none;
   }
-  #website-header .hamburger:focus {
+  .website-header .hamburger:focus {
     border: none;
   }
-  #website-header .hamburger .hamburger_box {
+  .website-header .hamburger .hamburger_box {
     width: 40px;
     height: 40px;
     display: inline-block;
     position: relative;
   }
-  #website-header .hamburger_inner {
+  .website-header .hamburger_inner {
     width: 100%;
     height: 3px;
     background-color: #ffffff;
@@ -48,7 +54,7 @@ body {
     -webkit-transition: background-color .1s ease-out;
     transition: background-color .1s ease-out;
   }
-  #website-header .hamburger_inner::before {
+  .website-header .hamburger_inner::before {
     width: 100%;
     height: 3px;
     background-color: #ffffff;
@@ -61,7 +67,7 @@ body {
     transition: transform .2s ease-in-out;
     transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
   }
-  #website-header .hamburger_inner::after {
+  .website-header .hamburger_inner::after {
     width: 100%;
     height: 3px;
     background-color: #ffffff;
@@ -74,18 +80,18 @@ body {
     transition: transform .2s ease-in-out;
     transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
   }
-  #website-header .hamburger--active .hamburger_inner {
+  .website-header .hamburger--active .hamburger_inner {
     background-color: transparent;
   }
-  #website-header .hamburger--active .hamburger_inner::before {
+  .website-header .hamburger--active .hamburger_inner::before {
     -webkit-transform: translateY(10px) rotate(45deg);
             transform: translateY(10px) rotate(45deg);
   }
-  #website-header .hamburger--active .hamburger_inner::after {
+  .website-header .hamburger--active .hamburger_inner::after {
     -webkit-transform: translateY(-10px) rotate(-45deg);
             transform: translateY(-10px) rotate(-45deg);
   }
-  #website-header .logo {
+  .website-header .logo {
     width: 60px;
     height: 60px;
   }
@@ -148,14 +154,14 @@ body {
     font-weight: bold;
     font-size: 20px;
   }
-  #main-page {
+  .main-page {
     height: 300px;
     background-image: url("../images/slider/zdj3.jpg");
     background-size: cover;
     color: white;
     padding: 30px 0;
   }
-  #main-page .motto {
+  .main-page .motto {
     font-size: 20px;
     margin-top: 50px;
     width: 100%;
@@ -346,14 +352,16 @@ body {
         justify-content: space-around;
     padding: 10px;
   }
-  .website-footer .links .menu-left {
-    padding: 0 10px;
-  }
   .website-footer .links .vertical-line {
     border-left: 1px solid white;
   }
+  .website-footer .links .menu-item {
+    padding: 5px 0;
+  }
+  .website-footer .links .facebook-icon {
+    width: 150px;
+  }
   .website-footer .rights {
-    font-size: 17px;
     color: white;
   }
 }

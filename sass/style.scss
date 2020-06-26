@@ -1,6 +1,12 @@
 body {
     text-align: center;
-    background-color:grey;
+    background-color: grey;
+    font-family: 'Raleway'serif;
+
+    a:hover {
+        color: white;
+        text-decoration: none;
+    }
 }
 
 @import 'small';

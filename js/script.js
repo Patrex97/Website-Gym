@@ -1,6 +1,16 @@
 // Hamburger menu & navigation animation
 const hamburger = document.querySelector('.hamburger');
 const navigation = document.querySelector('.navigation');
+const items = document.querySelectorAll('.navigation .menu-item');
+const itemsArray = Array.apply(null, items);
+
+// Closing navigation
+itemsArray.forEach(element => {
+    element.addEventListener('click', () => {
+        hamburger.classList.remove('hamburger--active');
+        navigation.classList.remove('navigation--active');
+    });
+});
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('hamburger--active');
