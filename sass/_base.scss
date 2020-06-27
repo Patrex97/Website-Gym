@@ -1,0 +1,376 @@
+// Sidebar and Header section
+    $bg-color: rgb(149, 148, 156);
+
+    @mixin line {
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        position: absolute;
+        left: 0;
+    }
+
+    @mixin nav-items {
+        width: 70%;
+        float: right;
+        display: block;
+        padding: 10px 0;
+        font-size: 20px;
+    }
+
+    .website-header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(146, 141, 141);
+        padding: 5px;
+        z-index: 2;
+
+        .name {
+
+            .part1,
+            .part2 {
+                display: block;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+            }
+    
+            margin:0;
+        }
+
+        .hamburger {
+            padding: 10px;
+            display: inline-block;
+            background-color: transparent;
+            border: 0px;
+            height: 40px;
+            z-index: 3;
+            outline: none;
+
+            &:focus {
+                border: none;
+
+            }
+
+            .hamburger_box {
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                position: relative;
+
+            }
+        }
+
+        .hamburger_inner {
+            @include line();
+
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color .1s ease-out;
+
+            &::before {
+                @include line();
+
+                content: '';
+                top: -10px;
+                transition: transform .2s ease-in-out;
+            }
+
+            &::after {
+                @include line();
+
+                content: '';
+                top: 10px;
+                transition: transform .2s ease-in-out;
+            }
+        }
+
+        .hamburger--active .hamburger_inner {
+            background-color: transparent;
+        }
+
+        .hamburger--active .hamburger_inner::before {
+            transform: translateY(10px) rotate(45deg);
+        }
+
+        .hamburger--active .hamburger_inner::after {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+
+        }
+
+    }
+
+    .navigation {
+        height: 100vh;
+        width: 100vw;
+        background-color: #464343;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100vw);
+        transition: transform .2s ease-in;
+        z-index: 1;
+        padding-top: 80px;
+        display: flex;
+        justify-content: right;
+        flex-wrap: wrap;
+
+        .menu-item {
+            @include nav-items();
+
+            border-bottom: 1px solid white;
+
+            &:first-of-type {
+                border-top: 1px solid white;
+            }
+        }
+
+        .nav-logo {
+            @include nav-items();
+            float: right;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .navigation--active {
+        transform: translateX(-30vw);
+    }
+
+    // Main-page
+
+    .main-page {
+        height: 300px;
+        background-image: url("../images/slider/zdj3.jpg");
+        background-size: cover;
+        color: white;
+        padding: 30px 0;
+
+        .motto {
+            font-size: 20px;
+            margin-top: 50px;
+            width: 100%;
+            padding: 0 8px;
+            background-color: rgba($color: #000000, $alpha: 0.35);
+        }
+    }
+
+    .info {
+        background-color: white;
+        padding: 20px 15vw;
+        display: flex;
+        flex-direction: column;
+
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+    }
+
+    .about-us {
+        background: linear-gradient(#ffffff, $bg-color);
+        padding: 10px;
+
+        .description {
+            text-align: justify;
+        }
+    }
+
+    .gallery {
+        position: relative;
+        background-color: $bg-color;
+
+        .slider {
+            position: relative;
+            border: 2px groove silver;
+        }
+
+        .previous,
+        .next {
+            position: absolute;
+            background-color: rgba($color: silver, $alpha: 0.6);
+            top: 50%;
+            transform: translateY(-50%);
+            height: 35px;
+            width: 35px;
+            font-weight: bold;
+        }
+
+        .previous {
+            left: 2%;
+        }
+
+        .next {
+            right: 2%;
+        }
+    }
+
+    .offer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 5vw;
+        background-color: rgba($bg-color, $alpha: 1.0);
+
+        .offer1,
+        .offer2 {
+            position: relative;
+            width: 90vw;
+            height: 200px;
+            background-color: rgb(187, 212, 228);
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 3px dashed gold;
+            box-shadow: 3px 3px 5px 3px gold, -3px -3px 5px 3px gold;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                height: 206px;
+                width: calc(100% + 10px);
+                border: 3px groove gold;
+            }
+        }
+
+        .offer2 {
+            box-shadow: 3px 3px 5px 3px silver, -3px -3px 5px 3px silver;
+            border-color:white;
+            &::before {
+                border: 3px groove rgb(223, 216, 216);
+            }
+        }
+
+
+        .offer3 {
+            position: relative;
+            width: 90vw;
+            height: 120px;
+            background-color: rgb(187, 212, 228);
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 3px groove silver;
+        }
+
+        .age {
+            font-family: 'Raleway'serif;
+            font-size: 25px;
+            font-weight: bold;
+            display: block;
+            border-bottom: solid 3px silver;
+        }
+
+        .prize {
+            font-family: 'Raleway'serif;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            border-bottom: solid 3px silver;
+            margin-bottom: 10px;
+        }
+
+        .list-header {
+            font-weight: bold;
+        }
+
+    }
+
+    .trainers {
+        background: linear-gradient($bg-color, $bg-color, #ffffff);
+        padding: 20px 10px;
+
+        .h2 {
+            padding-bottom: 10px;
+        }
+
+        .trener {
+            padding: 10px 0;
+            margin: 20px 0;
+            position: relative;
+            border: 3px ridge rgb(248, 230, 124);
+            background: linear-gradient(0.25turn, rgba(219, 207, 135, 0.342), #ebf8e1, rgba(189, 178, 114, 0.322));
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: -2%;
+                left: -2%;
+                border: 3px groove rgb(255, 236, 128);
+                width: 104%;
+                height: 104%;
+            }
+        }
+
+        .description {
+            padding: 5px 15%;
+            display: block;
+            font-size: 20px;
+        }
+
+        .contact {
+            display: block;
+            background-color: transparent;
+        }
+
+        .photo {
+            margin: 10px auto;
+            width: 60vw;
+        }
+
+        .contact-fb {
+            font-size: 25px;
+            font-weight: bold;
+
+            a:link,
+            a:visited {
+                color: blue;
+            }
+        }
+    }
+
+    .contact {
+        background-color: white;
+        padding: 20px 0;
+
+        .text {
+            border-bottom: 3px solid red;
+            font-size: 20px;
+        }
+    }
+
+    .website-footer {
+        .links {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+
+            .vertical-line {
+                border-left: 1px solid white;
+            }
+
+            .menu-item {
+                padding: 5px 0;
+            }
+
+            .facebook-icon {
+                width: 150px;
+            }
+
+        }
+
+        .rights {
+            color: white;
+        }
+    }
