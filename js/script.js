@@ -1,3 +1,6 @@
+// lock orientation
+screen.lockOrientation('portrait');
+
 // Hamburger menu & navigation animation
 const hamburger = document.querySelector('.hamburger');
 const navigation = document.querySelector('.navigation');

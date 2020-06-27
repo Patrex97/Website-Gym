@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Sidebar and Header section
 @media(min-width: 568px) and (max-width: 767.98px) {
 
@@ -183,3 +184,16 @@
         }
     }
 }
+=======
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+>>>>>>> fedb75f1cb206a846cc7acafafccf5aa32b1f9ea

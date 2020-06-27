@@ -9,6 +9,7 @@ body a:hover {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 .website-header {
   position: -webkit-sticky;
   position: sticky;
@@ -420,6 +421,9 @@ body a:hover {
 }
 
 @media (max-width: 567.98px) {
+=======
+@media (max-width: 1576.98px) {
+>>>>>>> fedb75f1cb206a846cc7acafafccf5aa32b1f9ea
   .website-header {
     padding: 5px;
   }
@@ -695,6 +699,20 @@ body a:hover {
   }
   .website-footer .links .facebook-icon {
     width: 150px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
