@@ -1,11 +1,6 @@
 // Sidebar and Header section
 @media (max-width: 567.98px) {
 
-    @mixin nav-items {
-        width: 70%;
-        padding: 10px 0;
-    }
-
     .website-header {
         padding: 5px;
 
@@ -39,6 +34,14 @@
 
     .navigation {
         padding-top: 80px;
+
+        .menu-item {
+            width: 70%;
+            float: right;
+            display: block;
+            padding: 10px 0;
+            font-size: 20px;
+        }
     }
 
     // Main-page

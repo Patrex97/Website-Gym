@@ -9,13 +9,7 @@
         left: 0;
     }
 
-    @mixin nav-items {
-        width: 70%;
-        float: right;
-        display: block;
-        padding: 10px 0;
-        font-size: 20px;
-    }
+    
 
     .website-header {
         position: sticky;
@@ -118,24 +112,16 @@
         z-index: 1;
         padding-top: 80px;
         display: flex;
-        justify-content: right;
+        justify-content:flex-end;
         flex-wrap: wrap;
 
         .menu-item {
-            @include nav-items();
 
             border-bottom: 1px solid white;
 
             &:first-of-type {
                 border-top: 1px solid white;
             }
-        }
-
-        .nav-logo {
-            @include nav-items();
-            float: right;
-            width: 150px;
-            height: 150px;
         }
     }
 

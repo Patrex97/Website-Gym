@@ -9,7 +9,6 @@ body a:hover {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 .website-header {
   position: -webkit-sticky;
   position: sticky;
@@ -136,35 +135,19 @@ body a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .navigation .menu-item {
-  width: 70%;
-  float: right;
-  display: block;
-  padding: 10px 0;
-  font-size: 20px;
   border-bottom: 1px solid white;
 }
 
 .navigation .menu-item:first-of-type {
   border-top: 1px solid white;
-}
-
-.navigation .nav-logo {
-  width: 70%;
-  float: right;
-  display: block;
-  padding: 10px 0;
-  font-size: 20px;
-  float: right;
-  width: 150px;
-  height: 150px;
 }
 
 .navigation--active {
@@ -421,9 +404,6 @@ body a:hover {
 }
 
 @media (max-width: 567.98px) {
-=======
-@media (max-width: 1576.98px) {
->>>>>>> fedb75f1cb206a846cc7acafafccf5aa32b1f9ea
   .website-header {
     padding: 5px;
   }
@@ -446,6 +426,13 @@ body a:hover {
   }
   .navigation {
     padding-top: 80px;
+  }
+  .navigation .menu-item {
+    width: 70%;
+    float: right;
+    display: block;
+    padding: 10px 0;
+    font-size: 20px;
   }
   .main-page {
     height: 300px;
@@ -585,6 +572,13 @@ body a:hover {
   .navigation {
     padding-top: 60px;
   }
+  .navigation .menu-item {
+    width: 100%;
+    float: right;
+    display: block;
+    padding: 5px 0;
+    font-size: 20px;
+  }
   .main-page {
     height: 300px;
     padding: 30px 0;
@@ -699,20 +693,6 @@ body a:hover {
   }
   .website-footer .links .facebook-icon {
     width: 150px;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  html {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-    -webkit-transform-origin: left top;
-            transform-origin: left top;
-    width: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
