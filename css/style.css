@@ -9,7 +9,7 @@ body a:hover {
   text-decoration: none;
 }
 
-@media (max-width: 576.98px) {
+@media (max-width: 1576.98px) {
   .website-header {
     position: -webkit-sticky;
     position: sticky;
