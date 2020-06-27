@@ -9,7 +9,7 @@ body a:hover {
   text-decoration: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 576.98px) {
   .website-header {
     position: -webkit-sticky;
     position: sticky;
@@ -363,6 +363,18 @@ body a:hover {
   }
   .website-footer .rights {
     color: white;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  @-ms-viewport {
+    orientation: portrait;
+  }
+  @-o-viewport {
+    orientation: portrait;
+  }
+  @viewport {
+    orientation: portrait;
   }
 }
 /*# sourceMappingURL=style.css.map */
