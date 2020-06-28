@@ -3,7 +3,7 @@
 
     @mixin line {
         width: 100%;
-        height: 3px;
+        height: 0.2em;
         background-color: #ffffff;
         position: absolute;
         left: 0;
@@ -17,7 +17,7 @@
         display: flex;
         justify-content: space-between;
         background-color: rgb(146, 141, 141);
-        padding: 5px;
+        padding: 0.35em;
         z-index: 2;
 
         .name {
@@ -27,18 +27,18 @@
                 display: block;
                 color: white;
                 font-weight: bold;
-                font-size: 20px;
+                font-size: 1.2em;
             }
     
             margin:0;
         }
 
         .hamburger {
-            padding: 10px;
+            padding: 0.67em;
             display: inline-block;
             background-color: transparent;
             border: 0px;
-            height: 40px;
+            height: 2.5em;
             z-index: 3;
             outline: none;
 
@@ -48,8 +48,8 @@
             }
 
             .hamburger_box {
-                width: 40px;
-                height: 40px;
+                width: 2.5em;
+                height: 2.5em;
                 display: inline-block;
                 position: relative;
 
@@ -67,7 +67,7 @@
                 @include line();
 
                 content: '';
-                top: -10px;
+                top: -0.67em;
                 transition: transform .2s ease-in-out;
             }
 
@@ -75,7 +75,7 @@
                 @include line();
 
                 content: '';
-                top: 10px;
+                top: 0.67em;
                 transition: transform .2s ease-in-out;
             }
         }
@@ -93,56 +93,35 @@
         }
 
         .logo {
-            width: 60px;
-            height: 60px;
+            width: 3.75em;
+            height: 3.75em;
 
         }
 
-    }
-
-    .navigation {
-        height: 100vh;
-        width: 100vw;
-        background-color: #464343;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateX(-100vw);
-        transition: transform .2s ease-in;
-        z-index: 1;
-        padding-top: 80px;
-        display: flex;
-        justify-content:flex-end;
-        flex-wrap: wrap;
-
-        .menu-item {
-
-            border-bottom: 1px solid white;
-
-            &:first-of-type {
-                border-top: 1px solid white;
-            }
+        .navigation{
+            display:flex;
+            flex-direction: row;
         }
-    }
 
-    .navigation--active {
-        transform: translateX(-30vw);
     }
 
     // Main-page
 
     .main-page {
+        position: relative;
         height: 300px;
         background-image: url("../images/slider/zdj3.jpg");
         background-size: cover;
         color: white;
-        padding: 30px 0;
+        padding: 1.9em 0;
 
         .motto {
-            font-size: 20px;
-            margin-top: 50px;
+            position: absolute;
+            font-size: 1.25em;
+            top:50%;
+            transform:translateY(-50%);
             width: 100%;
-            padding: 0 8px;
+            padding: 0 0.5em;
             background-color: rgba($color: #000000, $alpha: 0.35);
         }
     }
@@ -164,7 +143,6 @@
 
     .about-us {
         background: linear-gradient(#ffffff, $bg-color);
-        padding: 10px;
 
         .description {
             text-align: justify;
@@ -186,8 +164,8 @@
             background-color: rgba($color: silver, $alpha: 0.6);
             top: 50%;
             transform: translateY(-50%);
-            height: 35px;
-            width: 35px;
+            height: 2em;
+            width: 2em;
             font-weight: bold;
         }
 
@@ -215,7 +193,7 @@
             background-color: rgb(187, 212, 228);
             text-align: center;
             margin: 10px 0;
-            padding: 10px;
+            padding: 0.67em;
             border: 3px dashed gold;
             box-shadow: 3px 3px 5px 3px gold, -3px -3px 5px 3px gold;
 
@@ -246,13 +224,13 @@
             background-color: rgb(187, 212, 228);
             text-align: center;
             margin: 10px 0;
-            padding: 10px;
+            padding: 0.67em;
             border: 3px groove silver;
         }
 
         .age {
             font-family: 'Raleway'serif;
-            font-size: 25px;
+            font-size: 1.5em;
             font-weight: bold;
             display: block;
             border-bottom: solid 3px silver;
@@ -260,7 +238,7 @@
 
         .prize {
             font-family: 'Raleway'serif;
-            font-size: 20px;
+            font-size: 1.2em;
             font-weight: bold;
             display: block;
             border-bottom: solid 3px silver;
@@ -326,9 +304,26 @@
         }
     }
 
+    .reviews{
+        display:flex;
+        background-color:white;
+        .review{
+            display:block;
+            width:90vw;
+            font-weight:bolder;
+            background-color:rgba($color: blue, $alpha: .5);
+            color:white;
+            .big{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            .name{
+                display:inline-block;
+            }
+        }
+    }
+
     .contact {
         background-color: white;
-        padding: 20px 0;
 
         .text {
             border-bottom: 3px solid red;
@@ -341,19 +336,15 @@
             display: flex;
             justify-content: space-around;
             padding: 10px;
-
-            .vertical-line {
-                border-left: 1px solid white;
+            .menu-left{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
             }
-
             .menu-item {
-                padding: 5px 0;
+                display:block;
+                width:30vw;
             }
-
-            .facebook-icon {
-                width: 150px;
-            }
-
         }
 
         .rights {

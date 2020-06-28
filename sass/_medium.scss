@@ -1,70 +1,46 @@
 // Sidebar and Header section
-@media(min-width: 568px) and (max-width: 767.98px) {
-
+@media(min-width: 768px) and (max-width: 991.98px) {
+    body{
+        font-size:21px;
+    }
     .website-header {
-        padding: 5px;
+        padding: 0.30em;
         .name {
-            padding-top:7px;
-            .part1,
-            .part2 {
-                display: inline-block;
-                font-size: 25px;
-            }
+            display:none;
         }
 
         .hamburger {
-            padding: 10px;
-            height: 40px;
-
-            .hamburger_box {
-                width: 40px;
-                height: 40px;
-            }
+            display:none;
         }
 
         .logo {
-            width: 60px;
-            height: 60px;
+            order:2;
+            width: 3.5em;
+            height: 3.5em;
         }
     }
 
-        .menu-item {
-           
-        }
-
-
     .navigation {
-        min-height: 100vh;
-        width: 100vw;
-        background-color: #464343;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateX(-100vw);
-        transition: transform .2s ease-in;
-        z-index: 1;
-        padding-top: 60px;
-        display: flex;
-        justify-content:flex-end;
-        flex-wrap: wrap;
+        display:inline-block;    
+        order:-1;
+        flex-grow:5;
+        .menu{
+            display:flex;
+            flex-direction: row;
+            height:100%;
+            .menu-item{
+                display:inline-block;
+                padding:0.8em 1vw 0 1vw;
+            }
 
-        .menu-item {
-            width: 100%;
-            float: right;
-            display: block;
-            padding: 5px 0;
-            font-size:1.2em;
-            border-bottom: 1px solid white;
-
-            &:first-of-type {
-                border-top: 1px solid white;
+            .vertical-line{
+                width:100%;
+                border-left:2px solid white;
+                width:0;
             }
         }
     }
 
-    .navigation--active {
-        transform: translateX(-30vw);
-    }
     // Main-page
 
     .main-page {
@@ -73,7 +49,6 @@
 
         .motto {
             font-size: 27px;
-            margin-top: 50px;
             padding: 0 8px;
         }
     }

@@ -1,47 +1,49 @@
 // Sidebar and Header section
 @media (max-width: 567.98px) {
+    body{
 
+    }
     .website-header {
-        padding: 5px;
-
         .name {
 
             .part1,
             .part2 {
                 display: block;
-                font-size: 20px;
             }
         }
-
-        .hamburger {
-            padding: 10px;
-            height: 40px;
-
-            .hamburger_box {
-                width: 40px;
-                height: 40px;
-
-            }
-        }
-
-        .logo {
-            width: 60px;
-            height: 60px;
-
-        }
-
-    }
+    }   
 
     .navigation {
-        padding-top: 80px;
+        min-height: 100vh;
+        width: 100vw;
+        background-color: #464343;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100vw);
+        transition: transform .2s ease-in;
+        z-index: 1;
+        padding-top: 5em;
+        display: flex;
+        justify-content:flex-end;
+        flex-wrap: wrap;
 
         .menu-item {
-            width: 70%;
+            width: 80%;
             float: right;
             display: block;
             padding: 10px 0;
-            font-size: 20px;
+            font-size:1.2em;
+            border-bottom: 1px solid white;
+
+            &:first-of-type {
+                border-top: 1px solid white;
+            }
         }
+    }
+
+    .navigation--active {
+        transform: translateX(-30vw);
     }
 
     // Main-page
@@ -49,12 +51,6 @@
     .main-page {
         height: 300px;
         padding: 30px 0;
-
-        .motto {
-            font-size: 20px;
-            margin-top: 50px;
-            padding: 0 8px;
-        }
     }
 
     .info {
@@ -155,6 +151,21 @@
         }
     }
 
+    .reviews{
+        flex-direction: column;
+
+        padding:10px 5vw;
+        .review{
+            margin:5px 0;
+
+            border-radius: 50px;
+            padding:7px 15px;
+            .big{
+                font-size: 20px;
+            }
+        }
+    }
+
     .contact {
         padding: 20px 0;
 
@@ -170,11 +181,6 @@
             .menu-item {
                 padding: 5px 0;
             }
-
-            .facebook-icon {
-                width: 150px;
-            }
-
         }
     }
 }
