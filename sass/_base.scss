@@ -101,6 +101,12 @@
         .navigation{
             display:flex;
             flex-direction: row;
+
+            .menu-item{
+                &:hover{
+                    background-color: darken($color: rgb(146, 141, 141), $amount: 8);
+                }
+            }
         }
 
     }
@@ -166,6 +172,7 @@
             transform: translateY(-50%);
             height: 2em;
             width: 2em;
+            padding-bottom:2em;
             font-weight: bold;
         }
 
@@ -344,6 +351,10 @@
             .menu-item {
                 display:block;
                 width:30vw;
+
+                &:hover{
+                    background-color: darken($color: rgb(146, 141, 141), $amount: 8);
+                }
             }
         }
 

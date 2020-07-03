@@ -127,6 +127,10 @@ body a:hover {
           flex-direction: row;
 }
 
+.website-header .navigation .menu-item:hover {
+  background-color: #7e7878;
+}
+
 .main-page {
   position: relative;
   height: 300px;
@@ -195,6 +199,7 @@ body a:hover {
           transform: translateY(-50%);
   height: 2em;
   width: 2em;
+  padding-bottom: 2em;
   font-weight: bold;
 }
 
@@ -397,6 +402,10 @@ body a:hover {
 .website-footer .links .menu-item {
   display: block;
   width: 30vw;
+}
+
+.website-footer .links .menu-item:hover {
+  background-color: #7e7878;
 }
 
 .website-footer .rights {
@@ -918,6 +927,378 @@ body a:hover {
   }
   .contact .text {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    font-size: 23px;
+  }
+  .website-header {
+    padding: 0.30em;
+  }
+  .website-header .name {
+    display: none;
+  }
+  .website-header .hamburger {
+    display: none;
+  }
+  .website-header .logo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 3.5em;
+    height: 3.5em;
+  }
+  .navigation {
+    display: inline-block;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5;
+  }
+  .navigation .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100%;
+  }
+  .navigation .menu .menu-item {
+    display: inline-block;
+    padding: 0.8em 1vw 0 1vw;
+  }
+  .navigation .menu .vertical-line {
+    width: 100%;
+    border-left: 2px solid white;
+    width: 0;
+  }
+  .main-page {
+    height: 300px;
+    padding: 30px 0;
+  }
+  .main-page .motto {
+    font-size: 27px;
+    padding: 0 8px;
+  }
+  .info {
+    padding: 20px 25vw;
+  }
+  .about-us {
+    padding: 10px 40px;
+  }
+  .gallery .slider {
+    border: 4px solid silver;
+  }
+  .gallery .previous,
+  .gallery .next {
+    height: 35px;
+    width: 55px;
+  }
+  .offer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 20px 2vw;
+  }
+  .offer .offer1,
+  .offer .offer2 {
+    width: 30vw;
+    height: 250px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 20px;
+  }
+  .offer .offer1::before,
+  .offer .offer2::before {
+    top: -5px;
+    left: -5px;
+    height: 256px;
+    width: calc(100% + 10px);
+  }
+  .offer .offer2 {
+    height: 250px;
+  }
+  .offer .offer3 {
+    width: 47vw;
+    height: 120px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .offer .age {
+    font-size: 25px;
+  }
+  .offer .prize {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .offer .h2 {
+    width: 100%;
+  }
+  .trainers {
+    padding: 20px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .trainers .h2 {
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  .trainers .trener {
+    padding: 10px 0;
+    margin: 20px 0;
+    position: relative;
+    width: 40vw;
+  }
+  .trainers .trener::before {
+    top: -2%;
+    left: -2%;
+    width: 104%;
+    height: 104%;
+  }
+  .trainers .description {
+    font-size: 27px;
+  }
+  .trainers .contact {
+    font-size: 23px;
+  }
+  .trainers .photo {
+    margin: 10px auto;
+    width: 90%;
+  }
+  .trainers .contact-fb {
+    font-size: 35px;
+  }
+  .reviews {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 5vw;
+  }
+  .reviews .review {
+    margin: 5px 0;
+    border-radius: 50px;
+    padding: 7px 15px;
+  }
+  .reviews .review .big {
+    font-size: 20px;
+  }
+  .contact {
+    padding: 20px 0;
+  }
+  .contact .text {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 23px;
+  }
+  .website-header {
+    padding: 0.30em;
+  }
+  .website-header .name {
+    display: none;
+  }
+  .website-header .hamburger {
+    display: none;
+  }
+  .website-header .logo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 3.5em;
+    height: 3.5em;
+  }
+  .navigation {
+    display: inline-block;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5;
+  }
+  .navigation .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100%;
+  }
+  .navigation .menu .menu-item {
+    display: inline-block;
+    padding: 0.8em 1vw 0 1vw;
+  }
+  .navigation .menu .vertical-line {
+    width: 100%;
+    border-left: 2px solid white;
+    width: 0;
+  }
+  .main-page {
+    height: 300px;
+    padding: 30px 0;
+  }
+  .main-page .motto {
+    font-size: 27px;
+    padding: 0 8px;
+  }
+  .info {
+    padding: 20px 25vw;
+  }
+  .about-us {
+    padding: 10px 40px;
+  }
+  .gallery .slider {
+    border: 4px solid silver;
+  }
+  .gallery .previous,
+  .gallery .next {
+    height: 35px;
+    width: 55px;
+  }
+  .offer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 20px 2vw;
+  }
+  .offer .offer1,
+  .offer .offer2 {
+    width: 30vw;
+    height: 250px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 20px;
+  }
+  .offer .offer1::before,
+  .offer .offer2::before {
+    top: -5px;
+    left: -5px;
+    height: 256px;
+    width: calc(100% + 10px);
+  }
+  .offer .offer2 {
+    height: 250px;
+  }
+  .offer .offer3 {
+    width: 47vw;
+    height: 120px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .offer .age {
+    font-size: 25px;
+  }
+  .offer .prize {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .offer .h2 {
+    width: 100%;
+  }
+  .trainers {
+    padding: 20px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .trainers .h2 {
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  .trainers .trener {
+    padding: 10px 0;
+    margin: 20px 0;
+    position: relative;
+    width: 40vw;
+  }
+  .trainers .trener::before {
+    top: -2%;
+    left: -2%;
+    width: 104%;
+    height: 104%;
+  }
+  .trainers .description {
+    font-size: 27px;
+  }
+  .trainers .contact {
+    font-size: 23px;
+  }
+  .trainers .photo {
+    margin: 10px auto;
+    width: 90%;
+  }
+  .trainers .contact-fb {
+    font-size: 35px;
+  }
+  .reviews {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 5vw;
+  }
+  .reviews .review {
+    margin: 5px 0;
+    border-radius: 50px;
+    padding: 7px 15px;
+  }
+  .reviews .review .big {
+    font-size: 20px;
+  }
+  .contact {
+    padding: 20px 0;
+  }
+  .contact .text {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */

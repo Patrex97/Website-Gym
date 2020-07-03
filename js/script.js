@@ -41,3 +41,13 @@ nextBtn.addEventListener('click', () => {
 
     slider.setAttribute('src', `${path + slideCounter}.jpg`);
 });
+
+// map resize
+const map = document.querySelector('.map');
+
+window.addEventListener('resize', () =>{
+    map.setAttribute('width', window.innerWidth);
+    console.log('test');
+});
+map.setAttribute('width', window.innerWidth);
+map.setAttribute('height', 200);
