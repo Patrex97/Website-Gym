@@ -46,7 +46,7 @@ nextBtn.addEventListener('click', () => {
 const map = document.querySelector('.map');
 
 window.addEventListener('resize', () =>{
-    map.setAttribute('width', window.innerWidth);
+    map.setAttribute('width', window.innerWidth - 100);
     console.log('test');
 });
 map.setAttribute('width', window.innerWidth);

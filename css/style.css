@@ -375,6 +375,10 @@ body a:hover {
   background-color: white;
 }
 
+.contact iframe {
+  max-width: 100%;
+}
+
 .contact .text {
   border-bottom: 3px solid red;
   font-size: 20px;

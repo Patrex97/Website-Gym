@@ -332,6 +332,9 @@
     .contact {
         background-color: white;
 
+        iframe{
+            max-width:100%;
+        }
         .text {
             border-bottom: 3px solid red;
             font-size: 20px;
